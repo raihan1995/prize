@@ -8,7 +8,7 @@ app = Flask(__name__)
 def password():
     password_letters = requests.get('http://service2:5002/letters')
     password_digits = requests.get('http://service3:5003/digits')
-    password =  letters + str(digits)
+    password =  letters + digits
     return password
     
 #@app.route('/passwordstrength/<str:password>', methods=['GET'])

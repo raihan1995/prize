@@ -26,8 +26,8 @@ class Password(db.Model):
 @app.route("/", methods=['GET'])
 @app.route("/home")
 def home():
-    #password = requests.get('http://service4:5004/password')
-    return render_template("home.html", title='Home')
+    password = requests.get('http://service4:5004/password')
+    return render_template("home.html", title='Home', passwords = password)
 
 if __name__ == '__main__':
     app.run(port=5001,debug=True, host='0.0.0.0')

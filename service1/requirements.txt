@@ -1,0 +1,8 @@
+Flask
+Flask-SQLAlchemy
+flask-wtf
+flask_login
+pymysql
+Flask-Testing
+pytest
+requests
