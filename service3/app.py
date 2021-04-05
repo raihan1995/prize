@@ -10,4 +10,4 @@ def digits():
     return ( ''.join(random.choice(digits) for i in range(5)) )
 
 if __name__ == '__main__':
-    app.run(port=5003, debug=True, host='0.0.0.0')
+    app.run(port=5002, debug=True, host='0.0.0.0')
