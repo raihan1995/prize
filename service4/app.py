@@ -1,4 +1,4 @@
-from flask import Flask, Response
+from flask import Flask, Response, request
 import random
 import requests
 
@@ -13,9 +13,10 @@ def password():
     password = password_letters + password_digits
     return password
     
-@app.route("/getPassStrength", methods=["POST"])
+@app.route('/getPassStrength', methods=["POST"])
 def getPassStrength():
-    password = request.data.decode('utf-8')
+    data_sent = request.data.decode('utf-8')
+    password = data_sent
     mypassword = len(password)
     if mypassword >= 11:
         return "strong password"
