@@ -5,8 +5,14 @@
 
 <html>
   <body>
-     <p>Your Password</p>
-     <button>Check Password Strength</button>
+     <p>Your Generated Password is : {{ password }}</p>
+     <p>Your Password Strength is : {{ passwordstr }}</p>
+     <p>Previous Passwords: </p></b>
+     {% for pass in passdata %}
+    <div>
+      <p>{{ pass.password }}</b></p>
+    </div>
+    {% endfor %}
   </body>
 </html>
 	
