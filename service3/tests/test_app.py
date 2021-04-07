@@ -10,10 +10,10 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
 
     def test_letters(self):
-        response = self.client.get(url_for('letters'))
+        response = self.client.get(url_for('digits'))
         self.assertEqual(response.status_code, 200)
     
     def test_get_letters(self):
-        response = self.client.get(url_for('letters'))
+        response = self.client.get(url_for('digits'))
         self.assertIsNotNone(response.data)
     

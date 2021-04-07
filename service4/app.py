@@ -4,8 +4,6 @@ import requests
 
 app = Flask(__name__)
 
-
-
 @app.route('/password', methods=['GET'])
 def password():
     password_letters = requests.get('http://service2:5001/letters').text
