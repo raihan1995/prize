@@ -25,7 +25,7 @@ def home():
     addpass = Password(password=password)
     db.session.add(addpass)
     db.session.commit()
-    passdata = Password.query.all()
+    passdata = Password.query.order_by(Password.id.desc()).limit(10)
     return render_template("home.html", title='Home', password=password, passwordstr=passwordstr, passdata=passdata)
 
 if __name__ == '__main__':
