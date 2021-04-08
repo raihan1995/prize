@@ -7,5 +7,3 @@ flask-testing
 pytest
 pytest-cov
 requests
-mock
-request
