@@ -3,11 +3,7 @@ pipeline {
     stages{
         stage('Testing'){
             steps{
-                sh '''
-                    pwd
-                    ls
-                 
-                    '''
+                sh './scripts/apptest.sh'
             }
         }
         stage('Build'){
