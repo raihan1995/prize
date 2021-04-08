@@ -1,28 +1,27 @@
 pipeline {
     agent any
     stages{
-        // stage('Clone'){
-        //     steps{
-        //         sh 'git clone https://github.com/raihan1995/prize'
-        //     }
-        // }
         stage('Testing'){
             //add testing script
         }
         stage('Build'){
             steps{
-                //sh 'cd prize'
-                sh 'bash docker-compose down --rmi all'
-                sh 'bash docker-compose build'
-                sh 'bash docker-compose up -d'
+                sh 'docker-compose down --rmi all'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
+            }
+        }
+        stage('Push'){
+            steps{
+                sh 'docker-compose push'
             }
         }
         stage('Swarm Configuration'){
-            //Ansible
+            //Ansible-playbook
         }
         stage('Deploy'){
-            steps{ //sh 'docker-compose push'
-
+            steps{ 
+                sh 'docker-compose push'
             }
         }
         stage('Cleanup'){
