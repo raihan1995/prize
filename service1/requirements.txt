@@ -3,6 +3,9 @@ Flask-SQLAlchemy
 flask-wtf
 flask_login
 pymysql
-Flask-Testing
+flask-testing
 pytest
+pytest-cov
 requests
+mock
+request

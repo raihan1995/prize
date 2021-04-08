@@ -14,9 +14,7 @@ pipeline {
         // }
         stage('Build'){
             steps{
-                sh 'docker-compose down --rmi all'
                 sh 'docker-compose build'
-                sh 'docker-compose up -d'
             }
         }
         stage('Push'){
