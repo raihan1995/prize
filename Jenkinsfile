@@ -16,11 +16,11 @@ pipeline {
                 sh 'docker-compose push'
             }
         }
-        // stage('Swarm Configuration'){
-        //     steps{
-        //         //Ansible-playbook
-        //     }
-        // }
+        stage('Swarm Configuration'){
+            steps{
+                sh 'bash ./scripts/apptest.sh'
+            }
+        }
         // stage('Deploy'){
         //     steps{ 
         //         //sh 'docker-compose push'

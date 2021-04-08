@@ -1,0 +1,13 @@
+- hosts: manager
+  roles:
+  - docker
+  - manager
+
+- hosts: worker
+  roles:
+  - docker
+  - worker
+
+- hosts: nginx
+  roles:
+  - nginx

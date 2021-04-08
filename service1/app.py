@@ -7,6 +7,7 @@ from os import getenv
 import requests
 
 app = Flask(__name__)
+# app.config['SECRET_KEY'] = getenv('SECRET_KEY')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@34.89.53.51/prize_db' #getenv(secret variable)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
