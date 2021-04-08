@@ -16,7 +16,7 @@ def getPassStrength():
     data_sent = request.data.decode('utf-8')
     password = data_sent
     mypassword = len(password)
-    if mypassword >= 11:
+    if mypassword >= 13:
         return "strong password"
     else:
         return "weak password"
