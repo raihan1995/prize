@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Testing'){
             steps{
-                sh './scripts/apptest.sh'
+                sh 'bash ./scripts/apptest.sh'
             }
         }
         stage('Build'){
