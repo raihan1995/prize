@@ -3,7 +3,13 @@ pipeline {
     stages{
         stage('Testing'){
             steps{
-                //add testing script
+                sh '''
+                    cd prize/service1
+                    pip3 install -r requirements.txt
+                    cd tests
+                    pytest --cov=app
+                    cd ../..
+                    '''
             }
         }
         stage('Build'){
@@ -18,20 +24,20 @@ pipeline {
                 sh 'docker-compose push'
             }
         }
-        stage('Swarm Configuration'){
-            steps{
-                //Ansible-playbook
-            }
-        }
+        // stage('Swarm Configuration'){
+        //     steps{
+        //         //Ansible-playbook
+        //     }
+        // }
         stage('Deploy'){
             steps{ 
-                sh 'docker-compose push'
+                //sh 'docker-compose push'
             }
         }
-        stage('Cleanup'){
-            steps{
-                // do cleanup
-            }
-        }
+        // stage('Cleanup'){
+        //     steps{
+        //         // do cleanup
+        //     }
+        // }
     }
 }
