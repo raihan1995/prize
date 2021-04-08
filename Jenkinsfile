@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages{
         stage('Testing'){
-            //add testing script
+            steps{
+                //add testing script
+            }
         }
         stage('Build'){
             steps{
@@ -17,7 +19,9 @@ pipeline {
             }
         }
         stage('Swarm Configuration'){
-            //Ansible-playbook
+            steps{
+                //Ansible-playbook
+            }
         }
         stage('Deploy'){
             steps{ 
@@ -25,7 +29,9 @@ pipeline {
             }
         }
         stage('Cleanup'){
-            // do cleanup
+            steps{
+                // do cleanup
+            }
         }
     }
 }
