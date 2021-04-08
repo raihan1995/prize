@@ -1,17 +1,17 @@
 pipeline {
     agent any
     stages{
-        stage('Testing'){
-            steps{
-                sh '''
-                    cd prize/service1
-                    pip3 install -r requirements.txt
-                    cd tests
-                    pytest --cov=app
-                    cd ../..
-                    '''
-            }
-        }
+        // stage('Testing'){
+        //     steps{
+        //         sh '''
+        //             cd prize/service1
+        //             pip3 install -r requirements.txt
+        //             cd tests
+        //             pytest --cov=app
+        //             cd ../..
+        //             '''
+        //     }
+        // }
         stage('Build'){
             steps{
                 sh 'docker-compose down --rmi all'
@@ -29,11 +29,11 @@ pipeline {
         //         //Ansible-playbook
         //     }
         // }
-        stage('Deploy'){
-            steps{ 
-                //sh 'docker-compose push'
-            }
-        }
+        // stage('Deploy'){
+        //     steps{ 
+        //         //sh 'docker-compose push'
+        //     }
+        // }
         // stage('Cleanup'){
         //     steps{
         //         // do cleanup

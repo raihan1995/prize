@@ -3,11 +3,12 @@ from flask import Flask, render_template, request
 from flask import render_template, redirect, url_for, request
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+from os import getenv
 import requests
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@34.89.53.51/prize_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@34.89.53.51/prize_db' #getenv(secret variable)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 db.create_all()
