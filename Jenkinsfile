@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        DATABASE_URI = credentials("DATABASE_URI")
+    }
     stages{
         stage('Testing'){
             steps{
@@ -23,7 +26,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{ 
-                sh 'docker stack deploy --compose-file docker-compose.yaml passwordapp'
+                sh 'bash ./scripts/appdeploy.sh'
             }
         }
         // stage('Cleanup'){
