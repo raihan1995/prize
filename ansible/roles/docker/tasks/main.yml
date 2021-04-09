@@ -13,6 +13,7 @@
     state: latest
     update_cache: yes
 - name: Get Docker GBP 
+  become: true
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
