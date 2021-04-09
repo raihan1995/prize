@@ -1,7 +1,2 @@
 ---
 # handlers file for worker
-- name: 'reload nginx'
-  become: true
-  service: 
-    name: nginx
-    state: reloaded
