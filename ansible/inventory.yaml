@@ -1,16 +1,19 @@
 all:
   children:
-    manager:
+    managers:
       hosts:
         manager:
-    worker:
+    workers:
       hosts:
-        worker-one: # worker-one is the vm name public or private ip can also be used.
+        worker-one:
         worker-two:
+  vars:
+    ansible_user: raihan
+    ansible_python_interpreter: /usr/bin/python3
+    ansible_ssh_private_key_file: '~/.ssh/id_rsa'
+    docker_users:
+      - username: jenkins
+      - username: raihan
+
+  hosts:
     nginx:
-      hosts: 
-        nginx:
-  # vars:
-  #   ansible_python_interpreter: /usr/bin/python3
-  #   ansible_user: jenkins
-  #   ansible_ssh_private_key_file: '~/.ssh/id_rsa'

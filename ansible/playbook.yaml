@@ -3,7 +3,7 @@
   - docker
   - manager
 
-- hosts: worker
+- hosts: workers
   roles:
   - docker
   - worker

@@ -1,0 +1,24 @@
+---
+- name: 'install nginx using apt'
+  become: true
+  apt:
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
+- name: 'make sure that the nginx service is started'
+  become: true
+  service:
+    name: nginx
+    state: started
+- name: 'configure nginx to load balance'
+  become: true
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: 'reload nginx'
+- name: 'reload nginx'
+  become: true
+  service:
+    name: nginx
+    state: reloaded
