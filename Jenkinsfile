@@ -29,10 +29,5 @@ pipeline {
                 sh 'bash ./scripts/appdeploy.sh'
             }
         }
-        // stage('Cleanup'){
-        //     steps{
-        //         // do cleanup
-        //     }
-        // }
     }
 }
