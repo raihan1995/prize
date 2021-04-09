@@ -18,12 +18,13 @@ pipeline {
         }
         stage('Swarm Configuration'){
             steps{
-                sh 'bash ./scripts/apptest.sh'
+                sh 'cd ansible'
+                sh 'ansible-playbook -i inventory.yaml playbook.yaml'
             }
         }
         // stage('Deploy'){
         //     steps{ 
-        //         //sh 'docker-compose push'
+        //         sh 'docker stack deploy --compose-file docker-compose.yaml passwordapp'
         //     }
         // }
         // stage('Cleanup'){
