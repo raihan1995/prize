@@ -1,19 +1,24 @@
 # Password generator
 
-A web application that creates passwords
+A web application that creates randoms passwords.
 
 Author: Raihan Ahmed
 
 ## Requirements
 
-## Setup For Linux
-### Dependencies
-```bash
-git clone https://github.com/raihan1995/prize
-cd prize
-```
+- Kanban Board: Trello Board
+- Version Control System - Git
+- Functional Web-app made with flask including a front-end and testing
+- Cloud intergration - GCP MYSQL Database and VM's
+- CI Server - Jenkins
+- Containerisation - Docker
+- Orchestration Tool - Docker Swarm
+- Configuration Management - Ansible
+- Reverse Proxy - NGINX
+- Documentation
 
 ## Application Overview
+
 
 
 
@@ -43,9 +48,12 @@ For an updated trello board please click here
 
 ### Improvements
 
-Example 1:
+- Make website more user friendly, implement a eye-catching UI
 
-Example 2:
+- Passwords could be more complex, include special characters to further improve password strength
+
+- Make changes to Micro service arachitecture so all services talk to service1 independently
+
 
 #### References
 
@@ -54,11 +62,11 @@ https://qa-community.co.uk
 
 https://www.youtube.com/watch?v=7KCS70sCoK0
 
+https://www.youtube.com/watch?v=dU5112nqViY
 
+https://www.youtube.com/watch?v=1id6ERvfozo
 
+https://docs.ansible.com/ansible/latest/collections/community/docker/docker_swarm_module.html#ansible-collections-community-docker-docker-swarm-module
 
-
-
-
-
+https://github.com/raihan1995/project_car
 
