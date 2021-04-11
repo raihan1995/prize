@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 @app.route('/letters', methods=['GET'])
 def letters():
-    number = random.randint(5,10)
-    letters = string.ascii_lowercase
+    number = random.randint(5,8)
+    letters = string.ascii_uppercase
     return ( ''.join(random.choice(letters) for i in range(number)) )
 
 if __name__ == '__main__':
