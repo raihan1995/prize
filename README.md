@@ -33,7 +33,9 @@ Service 3 : This service creates a random string of numbers on a fixed length.
 
 Service 4 : This service calls both service 2 & 3 and retrieves text and numbers. It then joins together the text and numbers and returns a password. It also retrieves a password from service 1 which is the most recently generated password, and then checks the length off the password to determine if the password is either strong or weak.
 
+###
 
+![Screenshot_145](https://user-images.githubusercontent.com/35694370/114385211-a1a88c00-9b87-11eb-9dad-0849dfee0e85.png)
 
 ## Jenkins Pipeline
 
